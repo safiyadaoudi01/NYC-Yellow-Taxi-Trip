@@ -1,130 +1,84 @@
-📊 Analyse des courses Yellow Taxi – EDA & Statistiques
-📌 Contexte du projet
+# 📊 Analyse des courses Yellow Taxi – EDA & Statistiques
 
-Dans un contexte de données massives de mobilité urbaine, les Data Analysts sont souvent confrontés à un choix méthodologique clé :
+## 📌 Contexte du projet
 
-Faut-il analyser un échantillon de données et inférer la population, ou traiter l’ensemble des données via des technologies Big Data ?
+Dans un contexte de **données massives de mobilité urbaine**, les Data Analysts sont souvent confrontés à un choix méthodologique clé :
 
-Ce projet s’inscrit dans cette problématique et vise à comparer deux approches analytiques appliquées aux données des courses de taxis à New York entre 2022 et 2024 :
+> **Faut-il analyser un échantillon de données et inférer la population, ou traiter l’ensemble des données via des technologies Big Data ?**
 
-Une approche statistiques inférentielles basée sur un échantillon de 1 %
+Ce projet s’inscrit dans cette problématique et vise à comparer **deux approches analytiques** appliquées aux données des courses de taxis à New York entre **2022 et 2024** :
 
-Une approche Big Data exploitant 100 % des données avec Apache Spark
+- 🔹 **Approche de statistiques inférentielles** basée sur un échantillon de **1 %**
+- 🔹 **Approche Big Data** exploitant **100 % des données** avec **Apache Spark**
 
-L’objectif est de comprendre les avantages, limites et compromis de chaque approche dans un contexte métier réel.
+🎯 **Objectif global** :  
+Comprendre les **avantages, limites et compromis** de chaque approche dans un contexte métier réel.
 
-🎯 Objectifs
+---
 
-Explorer la structure et le contenu des données
+## 🎯 Objectifs
 
-Vérifier la qualité des données (valeurs manquantes, doublons, outliers)
+- Explorer la **structure** et le **contenu** des données
+- Vérifier la **qualité des données** :
+  - valeurs manquantes
+  - doublons
+  - outliers
+- Analyser les **distributions** des variables clés :
+  - distance
+  - prix
+  - tips
+  - durée des courses
+- Réaliser des **analyses statistiques** :
+  - moyennes
+  - proportions
+  - intervalles de confiance
+- Comparer les résultats :
+  - avec et sans outliers
+  - échantillon vs population
+- Appliquer la **même logique d’analyse** sur le Big Data
 
-Analyser les distributions des variables clés (distance, prix, tips, etc.)
+---
 
-Réaliser des analyses statistiques (moyennes, proportions, intervalles de confiance)
+## 🧪 Méthodologie suivie
 
-Comparer les résultats avec et sans outliers
+Le projet suit un **workflow Data Analyst professionnel**, commun aux deux approches.
 
-Appliquer la même logique d’analyse sur le Big Data
+### 1️⃣ Prise en main des données & EDA
+- Compréhension des variables
+- Analyse des distributions
+- Étude des valeurs manquantes
+- Vérification de la cohérence des données
 
+### 2️⃣ Approche statistiques inférentielles (Échantillon)
+- Calcul des indicateurs clés
+- Intervalles de confiance
+- Analyse de la représentativité
+- Détection et analyse des outliers
 
-🧪 Méthodologie suivie
+### 3️⃣ Approche Big Data (Population complète)
+- Chargement des données avec **Spark**
+- Agrégations à grande échelle
+- Calcul des **valeurs exactes de la population**
 
-Le projet suit un workflow Data Analyst professionnel, commun aux deux approches :
+### 4️⃣ Comparaison des résultats
+- Échantillon vs population
+- Biais potentiels
+- Impact des outliers
+- Pertinence métier des résultats
 
-Prise en main des données & EDA
+---
 
-Compréhension des variables
+## 📁 Structure du projet
 
-Analyse des distributions
-
-Valeurs manquantes
-
-Cohérence des données
-
-Approche statistiques inférentielles (échantillon)
-
-Calcul des indicateurs clés
-
-Intervalles de confiance
-
-Analyse de représentativité
-
-Détection et analyse des outliers
-
-Approche Big Data (population complète)
-
-Chargement des données avec Spark
-
-Agrégations à grande échelle
-
-Calcul des valeurs exactes de la population
-
-Comparaison des résultats
-
-Échantillon vs population
-
-Biais potentiels
-
-Impact des outliers
-
-Pertinence métier
-
-📁 Structure du projet
-
-notebook_echantillon.ipynb
-→ Analyse complète sur l’échantillon (EDA + statistiques)
-
-notebook_big_data.ipynb
-→ Analyse sur l’ensemble des fichiers Yellow Taxi (Big Data)
-
-echantillon/
-→ Contient le fichier CSV de l’échantillon
-
-yellow_taxi/
-→ Contient 36 fichiers du jeu de données complet (Big Data)
-
-Tous les fichiers de données sont disponibles sur ce dépôt GitHub afin de permettre la reproduction complète de l’analyse.
-
-⚠️ Remarque importante sur les chemins des fichiers
-🔹 Notebook Échantillon
-
-Dans le notebook de l’échantillon, le chemin utilisé est :
-
-'/Volumes/workspace/trips/echantillon/yellowtaxisample1pct_hybrid_stratified.csv'
-
-
-➡️ Action requise pour le visiteur :
-Après avoir cloné ou téléchargé le dépôt GitHub, vous devez modifier ce chemin afin qu’il corresponde à l’emplacement local du fichier sur votre machine.
-
-🔹 Notebook Big Data
-
-Dans le notebook Big Data, les fichiers sont chargés via le dossier suivant :
-
-folder = "/Volumes/workspace/trips/yellow_taxi"
-files = dbutils.fs.ls(folder)
-
-
-➡️ Le dossier yellow_taxi contient 36 fichiers analysés dans le notebook.
-➡️ Ces fichiers sont également uploadés sur GitHub.
-➡️ Le visiteur doit adapter le chemin folder selon son environnement local ou cloud (Databricks, local, etc.).
-
-✅ Reproductibilité
-
-Tous les notebooks sont exécutables
-
-Les données nécessaires sont fournies dans le dépôt
-
-Seule la modification des chemins de fichiers est requise
-
-🛠️ Technologies utilisées
-
-Python
-
-Pandas, NumPy
-
-Matplotlib / Seaborn
-
-SciPy
-
-Environnement Databricks (pour le Big Data)
+```text
+├── notebook_echantillon.ipynb
+│   └── Analyse complète sur l’échantillon (EDA + statistiques)
+│
+├── notebook_big_data.ipynb
+│   └── Analyse Big Data sur l’ensemble des courses Yellow Taxi
+│
+├── echantillon/
+│   └── Fichier CSV de l’échantillon (1 %)
+│
+├── yellow_taxi/
+│   └── 36 fichiers du jeu de données complet (Big Data)
