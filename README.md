@@ -98,4 +98,66 @@ Le projet suit un **workflow Data Analyst professionnel**, commun aux deux appro
 │   └── Génération de l’échantillon stratifié (1 %)
 │
 └── README.md
+```
+
+📌 **Disponibilité des données**
+
+Tous les fichiers de données sont disponibles dans ce dépôt GitHub afin de permettre la **reproductibilité complète** de l’analyse.
+
+---
+
+## ⚠️ Remarque importante sur les chemins des fichiers
+
+### 🔹 Notebook Échantillon
+
+Dans le notebook de l’échantillon, le chemin utilisé pour charger les données est :
+
+```python
+'/Volumes/workspace/trips/echantillon/yellowtaxisample1pct_hybrid_stratified.csv'
+```
+
+➡️ Action requise pour le visiteur
+Après avoir cloné ou téléchargé le dépôt GitHub, vous devez modifier ce chemin afin qu’il corresponde à l’emplacement local du fichier sur votre machine.
+
+🔹 Notebook Big Data
+
+Dans le notebook Big Data, les fichiers sont chargés via le dossier suivant :
+
+folder = "/Volumes/workspace/trips/yellow_taxi"
+files = dbutils.fs.ls(folder)
+
+
+➡️ Le dossier yellow_taxi contient 36 fichiers analysés dans le notebook
+➡️ Ces fichiers sont également disponibles sur GitHub
+➡️ Le visiteur doit adapter le chemin folder selon son environnement d’exécution :
+
+Databricks
+
+Environnement cloud
+
+Exécution locale
+
+✅ Reproductibilité
+
+✔️ Tous les notebooks sont exécutables
+
+✔️ Les données nécessaires sont fournies dans le dépôt
+
+⚠️ Seule la modification des chemins de fichiers est requise
+
+🛠️ Technologies utilisées
+
+Python
+
+Pandas, NumPy
+
+Matplotlib, Seaborn
+
+SciPy
+
+Apache Spark
+
+Environnement Databricks (Big Data)
+
+
 
