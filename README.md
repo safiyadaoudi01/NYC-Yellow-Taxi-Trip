@@ -100,13 +100,14 @@ Le projet suit un **workflow Data Analyst professionnel**, commun aux deux appro
 └── README.md
 ```
 
+
+## ⚠️ Remarque importante sur les chemins des fichiers
+
 📌 **Disponibilité des données**
 
 Tous les fichiers de données sont disponibles dans ce dépôt GitHub afin de permettre la **reproductibilité complète** de l’analyse.
 
 ---
-
-## ⚠️ Remarque importante sur les chemins des fichiers
 
 ### 🔹 Notebook Échantillon
 
