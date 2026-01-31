@@ -112,14 +112,14 @@ Tous les fichiers de données sont disponibles dans ce dépôt GitHub afin de pe
 
 Dans le notebook de l’échantillon, le chemin utilisé pour charger les données est :
 
-```python
+```text
 '/Volumes/workspace/trips/echantillon/yellowtaxisample1pct_hybrid_stratified.csv'
 ```
 
 ➡️ Action requise pour le visiteur
 Après avoir cloné ou téléchargé le dépôt GitHub, vous devez modifier ce chemin afin qu’il corresponde à l’emplacement local du fichier sur votre machine.
 
-🔹 Notebook Big Data
+### 🔹 Notebook Big Data
 
 Dans le notebook Big Data, les fichiers sont chargés via le dossier suivant :
 
@@ -129,13 +129,13 @@ files = dbutils.fs.ls(folder)
 
 ➡️ Le dossier yellow_taxi contient 36 fichiers analysés dans le notebook
 ➡️ Ces fichiers sont également disponibles sur GitHub
-➡️ Le visiteur doit adapter le chemin folder selon son environnement d’exécution :
+➡️ Il faut adapter le chemin folder selon l'environnement d’exécution :
 
-Databricks
+ - Databricks
 
-Environnement cloud
+- Environnement cloud
 
-Exécution locale
+- Exécution locale
 
 ✅ Reproductibilité
 
@@ -147,17 +147,17 @@ Exécution locale
 
 🛠️ Technologies utilisées
 
-Python
+- Python
 
-Pandas, NumPy
+- Pandas, NumPy
 
-Matplotlib, Seaborn
+- Matplotlib, Seaborn
 
-SciPy
+- SciPy
 
-Apache Spark
+- Apache Spark
 
-Environnement Databricks (Big Data)
+- Environnement Databricks (Big Data)
 
 
 
