@@ -72,14 +72,30 @@ Le projet suit un **workflow Data Analyst professionnel**, commun aux deux appro
 ## 📁 Structure du projet
 
 ```text
-├── notebook_echantillon.ipynb
+├── .databricks/
+│   └── commit_outputs/
+│
+├── datasets/
+│   ├── echantillon/
+│   │   └── yellowtaxisample1pct_hybrid_stratified.csv
+│   │
+│   └── yellow_taxi/
+│       ├── yellow_tripdata_2022-01.parquet
+│       ├── yellow_tripdata_2022-02.parquet
+│       ├── ...
+│       └── yellow_tripdata_2024-12.parquet
+│
+├── slides/
+│   └── Population_Sample_Validation.pdf
+│
+├── echantillon.ipynb
 │   └── Analyse complète sur l’échantillon (EDA + statistiques)
 │
-├── notebook_big_data.ipynb
+├── NYC_Yellow_Taxi_Trip.ipynb
 │   └── Analyse Big Data sur l’ensemble des courses Yellow Taxi
 │
-├── echantillon/
-│   └── Fichier CSV de l’échantillon (1 %)
+├── split_by_strat.ipynb
+│   └── Génération de l’échantillon stratifié (1 %)
 │
-├── yellow_taxi/
-│   └── 36 fichiers du jeu de données complet (Big Data)
+└── README.md
+
