@@ -9,6 +9,7 @@ Dans un contexte de **données massives de mobilité urbaine**, les Data Analyst
 Ce projet s’inscrit dans cette problématique et vise à comparer **deux approches analytiques** appliquées aux données des courses de taxis à New York entre **2022 et 2024** :
 
 🔹 **Approche de statistiques inférentielles** basée sur un échantillon de **1 %**
+
 🔹 **Approche Big Data** exploitant **100 % des données** avec **Apache Spark**
 
 🎯 **Objectif global** :  
